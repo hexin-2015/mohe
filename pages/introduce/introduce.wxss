@@ -1,0 +1,65 @@
+/* pages/main/index.wxss */
+@import "../common/wxss/item.wxss";
+
+.container{
+ flex-direction: column;
+ justify-content:flex-start;
+ align-content:flex-end;
+}
+
+.no_comment {
+  color: white;
+  text-align: center;
+}
+
+.topScrollView {
+  display: flex;  
+  width: 100%;
+  height: 80%;
+  margin-top: 0rpx;
+  margin-bottom: 0rpx;
+  /* background-color: ghostwhite; */
+  overflow: hidden; 
+}
+
+.bottomView {
+  display: flex;  
+  flex-direction: row;
+  width: 100%;
+  height: 280rpx;
+  margin-top: 0rpx;
+  /* background-color: gainsboro;  */
+}
+
+.commInputView {
+  /* background-color: goldenrod; */
+  width: 100%;
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+} 
+
+.btnView{
+  width: 100%;
+  display: flex; 
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+ .comment_textarea {
+  position: relative; 
+  box-sizing: border-box;
+  overflow: hidden; 
+  width: 650rpx;
+  height: 150rpx;
+  margin-top: 10rpx;
+  border: 1px #dadada;
+  border-style: solid solid solid solid; 
+}
+
+.comment_add_btn{
+  margin-right: 0rpx;
+  height: 60rpx; 
+  margin-top: 5rpx;
+}

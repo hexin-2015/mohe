@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+
+      <!-- <view class="userinfo"> -->
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl" background-size="cover"></open-data>
+      </view>
+      <view class='col'>
+        <open-data type="userNickName" class="userinfo-nickname"></open-data>
+        <text class='level'>颜值: {{beauty}}</text>
+        <view class='money' bindtap='chargeMoney'>
+          <image src='../../image/png/gold.png'></image>
+          <view style='margin-left: 10rpx; flex: 1'>{{gold}}</view>
+          <!-- <image src='../../image/png/jia.png' style='height: 20rpx; width: 20rpx; margin-right: 10rpx'></image> -->
+        </view>
+
+        <!-- </view> -->
+      </view>
+    </block>
+  </view>
+  <!-- <view class="usermotto">
+    <text class="user-motto">hello {{userInfo.nickName}}</text>
+  </view> -->
+</view>

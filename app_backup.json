@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/main/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "Demo"
+  },
+ 
+ "tabBar": {
+    "color":"",
+    "selectedColor":"green",	
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/main/index",
+        "text": "应用中心"
+      },
+      {
+        "pagePath": "pages/test/index",
+        "text": "测试"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      }
+      
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

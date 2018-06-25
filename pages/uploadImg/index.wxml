@@ -1,0 +1,42 @@
+
+<view class='container'>
+
+   <scroll-view class='topScrollView' scroll-y="true">
+    <swiper circular='true' previous-margin="0px" display-multiple-items='1'  next-margin='0rpx'>
+      <block wx:for="{{imageUrls}}" wx:for-item="imgItem" wx:key="*this">
+        <swiper-item>
+          <view class='rankTypeItem'>
+            <image src="{{imgItem}}"  mode="aspectFill" class="img" ></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper> 
+
+    <view wx:if="{{imgInfo != 'null'}}" class="showResultMessage">
+      <view wx:if="{{imgInfo.isOK==false}}">{{imgInfo.msg}}</view>
+      <view wx:else>
+        <view> 可信度：{{imgInfo.score}} </view>
+        <view class='result-cell-item'>
+          <view>识别结果：{{imgInfo.name}} </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{kindInfo != '{}'}}" class="introductionTitle">
+      <image src='{{kindInfo.avatarUrl}}'  mode="aspectFill" class="icon" ></image> 
+      <view class="title"> {{kindInfo.nickName}} </view>
+    </view> 
+    <view wx:if="{{kindInfo.content != 'null'}}" class="introductionContent">
+      <text>{{kindInfo.content}}</text>
+    </view> 
+  </scroll-view> 
+  
+  <view class="bottomView" hidden='{{isHiddenBtn}}'>
+     <view class="bottomBtnView">
+      <button bindtap='onModifyIntroduction' type='primary' size='mini' plain='true'>更新简介</button>
+      <button bindtap='onAddIntroduction' type='primary' size='mini' plain='true'>添加简介</button>
+    </view> 
+  </view>
+
+</view>
+
+

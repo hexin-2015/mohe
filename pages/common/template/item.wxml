@@ -1,0 +1,47 @@
+<template name="item">
+  <view  class="itemBlock">
+    <view class="item" bindtap="{{bindtap}}" data-title="{{title}}" id="{{id}}"> 
+    <image src="{{imgUrl}}"></image>
+    </view>
+    <text class="showTitle"> {{title}} </text>
+  </view>
+</template>
+
+<template name="itemIntroduce">
+  <view  class="itemIntr">
+    <view class="itemIntrHeader" id="{{id}}" > 
+      <image src="{{avatarUrl}}" class="itemIntrAvatar"></image>
+      <view class="itemIntrTitle" data-title="{{nickName}}" id="{{id}}"> 
+        <text class="showNickName"> {{nickName}} </text>
+        <text class="showTime"> {{createtime}} </text>
+      </view>
+
+
+      <view class="comment_social">
+        <block wx:if='{{isMe == 1}}'>
+          <view class="comment_modify" bindtap='onModify' id="{{id}}" data-content="{{content}}">
+            <text class="comment_modify_title">编辑</text>
+          </view>
+        </block>
+
+        <block wx:if='{{isLiked == 1}}'>
+          <view class="comment_zan" bindtap='onLike' id="{{id}}" data-isLiked="{{isLiked}}">
+            <image class="comment_zan_image" src="./images/zan_self.png"></image>
+            <text class="comment_zan_num" wx:if="{{score > 0}}">{{score}}</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="comment_zan" bindtap='onLike' id="{{id}}" data-isLiked="{{isLiked}}">
+            <image class="comment_zan_image" src="./images/zan.png"></image>
+            <text class="comment_zan_num" wx:if="{{score > 0}}">{{score}}</text>
+            <text class="comment_zan_num" wx:else>赞</text>
+          </view>
+        </block>
+      </view>
+
+    </view>
+    <view class="itemIntrContent"> 
+      <text> {{content}} </text>
+    </view>
+  </view>
+</template>

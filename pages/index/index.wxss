@@ -1,0 +1,95 @@
+/**index.wxss**/
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+} */
+.page {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-start;
+  z-index: 99;
+  padding: 40rpx;
+  box-sizing: border-box;
+  background: linear-gradient(lightpink, lightblue);
+}
+.usermotto {
+  margin-top: 200px;
+}
+
+.userinfo_bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 210rpx;
+  z-index: 0;
+}
+
+.userinfo {
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30rpx 0;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.userinfo-avatar {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 7rpx solid #fff;
+  margin-right: 40rpx;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  font-size: 35rpx;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 3rpx 0 0 #5F9EA5, 0 3rpx 0 #5F9EA5, 0 3rpx 0 #5F9EA5;
+}
+
+.money {
+  display: flex;
+  flex-direction: row;
+  background: lightsalmon;
+  height: 40rpx;
+  width: 100%;
+  border-radius: 20rpx;
+  margin-top: 10rpx;
+  padding-right: 10rpx;
+  color: white;
+  font-size: 30rpx;
+  align-items: center;
+}
+
+.money image {
+  height: 42rpx;
+  width: 42rpx;
+  border-radius: 50%;
+}
+
+.level {
+  color: #fff;
+  font-size: 30rpx;
+}

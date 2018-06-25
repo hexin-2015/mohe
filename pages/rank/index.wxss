@@ -1,0 +1,158 @@
+/* pages/rank/index.wxss */
+
+.rankType {
+  /* margin: 1rpx; */
+  height: 100rpx; 
+  /* background-color: lightpink; */
+  border: 0;
+  border-bottom: 1rpx dotted lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  flex-grow: 10;
+}
+.rankTypeItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 28rpx;
+  color: white
+}
+
+.rankContents {
+  width: 100%;
+  height: 100%;
+}
+
+.rankItem {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  /* justify-content: center; */
+  margin: 10rpx;
+  bottom: 0;
+  /* border-top: 1rpx solid #d9d9d9; */
+  border-bottom: 2rpx solid #d9d9d9;
+}
+
+.rankItem::after {
+}
+
+.rankItemOrder {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  /* color:lightskyblue */
+}
+
+.rankUserInfo {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rankUserInfo image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.rankUserInfo text {
+  display: flex;
+}
+
+.rankImg {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10rpx;
+}
+
+.rankImg image {
+  width: 150rpx;
+  height: 200rpx;
+}
+
+scroll-view {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  /* top: 50%; */
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background: #f8f8f8;
+  /* margin: -180rpx 105rpx; */
+  border-radius: 5rpx;
+}
+
+.rankImg1 {
+   width: 50%;  
+  /* height: 100%; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 40rpx;
+  
+}
+.money {
+  display: flex;
+  flex-direction: row;
+  background: lightsalmon;
+  height: 40rpx;
+   /* width: 100%;  */
+  border-radius: 20rpx;
+  margin-top: 10rpx;
+  padding-right: 20rpx;
+  color: white;
+  font-size: 30rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.money image {
+  height: 42rpx;
+  width: 42rpx;
+  border-radius: 50%;
+}
+
+.page-head{
+  display: flex;
+  flex-direction: row;
+  background-color: lightpink;
+}
+.head-left{
+  flex-grow: 1;
+  align-items: flex-end;
+}
+.head-right{
+  flex-grow: 1;
+}

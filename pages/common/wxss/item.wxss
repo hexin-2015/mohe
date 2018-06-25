@@ -1,0 +1,136 @@
+
+.itemBlock{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 315rpx;
+  margin-bottom: 30rpx;
+  color: #FFFFFF;
+
+}
+.item{
+    background: lightblue;
+    width: 100%;
+    height: 180rpx;
+}
+.showTitle{
+  display: flex;
+}
+
+.item image{
+  height: 180rpx;
+  width: 315rpx;
+
+}
+
+
+.itemIntr{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  color: #FFFFFF;
+}
+.itemIntrHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100rpx;
+    margin-left: 5rpx;
+    margin-right: 5rpx;
+}
+
+.itemIntrAvatar{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  margin-left: 5rpx;
+  margin-right: 55rpx;
+}
+
+.itemIntrTitle {
+  display: flex;
+  height: 100rpx;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 5rpx;
+}
+
+.btnLike{
+  height: 50rpx;
+  width: 50rpx;
+  margin-right: 5rpx;
+  align-items: right;
+  font-size: 10rpx;
+}
+
+.itemIntrContent{
+  align-items: left;
+  margin-top: 50rpx;
+  margin-left: 5rpx;
+  width: 100%;
+  font-size: 30rpx;
+}
+
+
+.showNickName{
+  display: flex;
+  font-size: 45rpx;
+
+}
+
+.showTime{
+  display: flex;
+  font-size: 30rpx;
+  
+}
+
+.comment_social {
+  display: flex;
+  height: 100rpx;
+  margin-right: 5rpx;
+  align-items: flex-end;
+  text-align: right;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.comment_zan {
+  display: flex;
+  margin-right: 5rpx;
+  align-items: flex-end;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.comment_zan_image {
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 5rpx;
+  margin-left: 10rpx;
+}
+
+.comment_zan_num {
+  color: #FFFFFF;
+  font-size: 30rpx;
+  width: auto;
+  margin-bottom: -5rpx;
+  text-align: bottom;
+}
+
+.comment_modify {
+  height: 50rpx;
+  width: 85rpx;
+  margin-right: 5rpx;
+  align-items: right;
+}
+
+.comment_modify_title {
+  color: #FFFFFF;
+  font-size: 30rpx;
+  margin-bottom: -5rpx;
+}

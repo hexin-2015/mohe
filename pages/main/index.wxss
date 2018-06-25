@@ -1,0 +1,11 @@
+/* pages/main/index.wxss */
+@import "../common/wxss/item.wxss";
+
+.itemBoot{
+   width: 100%;
+   padding-top: 1%;
+   display: flex;
+   flex-direction:row;
+   justify-content:space-between;
+   flex-wrap:wrap;
+}

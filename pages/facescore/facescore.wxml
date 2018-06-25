@@ -1,0 +1,12 @@
+<!--pages/facescore/facescore.wxml-->
+<scroll-view class='container' scroll-y="true">
+  <image src='{{img}}' mode="aspectFill" class="img"></image>
+  <view wx:if="{{imgInfo != 'null'}}" class="showResultMessage">
+    <view wx:for="{{imgInfo}}" wx:key="*this">
+      <view class=''> {{item.showTitle}}：{{item.showValue}} </view>
+    </view>
+  </view>
+  <view wx:if="{{canUploadRank=='true'}}" class="showResultMessage" style='margin-top:20rpx'>
+    <button bindtap='uploadRank' plain='true' type='primary' size='mini'>上传排行榜</button>
+  </view>
+</scroll-view>

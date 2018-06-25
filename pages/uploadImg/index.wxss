@@ -1,0 +1,115 @@
+/* pages/test/index.wxss */
+
+.container{
+ flex-direction: column;
+ justify-content:flex-start;
+ align-content:flex-end;
+}
+
+#showImg{
+  margin-bottom: 10rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto
+
+}
+
+.section{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
+
+}
+
+.img{
+  height: 400rpx;
+  margin-top: 10rpx;
+  width: 95%;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+view{
+  
+  font-size: 30rpx;
+}
+.showResultMessage{
+  display: flex;
+  margin-top: 20rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:white;
+
+}
+
+.introductionTitle{
+  margin-top: 20rpx;
+  display: flex;  
+  flex-direction: row;
+  justify-content:left;
+  color: white;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.icon{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-left: 10rpx;
+  margin-right: 50rpx; 
+}
+
+.title{
+  margin-top: 5rpx;
+  font-size: 45rpx; 
+}
+
+.introductionContent{
+  font: font-face;
+  margin-top: 30rpx;
+  color: white;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  height: auto;
+}
+
+.result-cell-item{
+  display: flex;
+}
+
+.comment{
+  margin-left: 20rpx;
+}
+
+.topScrollView {
+  display: flex;  
+  width: 100%;
+  height: 85%;
+  margin-top: 0rpx;
+  overflow: hidden; 
+}
+
+.bottomView {
+  display: flex;  
+  flex-direction: row;
+  width: 100%;
+  height: 15%;
+  margin-top: 0rpx;
+}
+
+.bottomBtnView{
+  width: 100%;
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+

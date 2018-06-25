@@ -1,0 +1,47 @@
+<!--pages/rank/index.wxml-->
+<view>
+<view class='page-head iconfont'>
+  <view class='head-left icon-zuohua' bindtap='goLeft'></view>
+  <swiper circular='true' previous-margin="0px" display-multiple-items='1' current='{{currentIndex}}' class='rankType' next-margin='0rpx' bindchange='onSwiperChange' bindanimationfinish='onSwiperChangeAnimationFinish'>
+    <block wx:for="{{rankTypes}}" wx:for-item="rankType" wx:key="*this">
+      <swiper-item>
+        <view class='rankTypeItem'>
+          <text class="icon-paiming"> {{ rankType}}</text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='head-right icon-youhua' bindtap='goRight'></view>
+</view>
+<view class="container">
+  <scroll-view scroll-y="true" style='height:90%'>
+    <view class="rankContents">
+      <block wx:for='{{ranks[activeIndex]}}' wx:for-index='rankInfoIndex' wx:for-item='rankInfoItem' wx:key="*this">
+        <view class='rankItem'>
+          <view class='rankItemOrder'>{{rankInfoIndex+1}}</view>
+          <view class='rankUserInfo'>
+            <image bindtap="bindViewTap" lazy-load='true' class="userinfo-avatar" src="{{rankInfoItem.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{rankInfoItem.nickName}}</text>
+          </view>
+          <view wx:if="{{activeIndex<2}}" class='rankImg'>
+            <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+              <image data-url="{{rankInfoItem.imgPath}}" bindtap='previewImage' lazy-load='true' src="{{rankInfoItem.imgPath}}" style="display: block" />
+              <view class="weui-badge" style="position: absolute;top: -.2em;right: -.0em;">{{rankInfoItem.beauty}}</view>
+            </view>
+          </view>
+          <view class='rankImg1' wx:else>
+            <view class='money'>
+              <image src='../../image/png/gold.png'></image>
+              <view style='margin-left: 10rpx;'>{{rankInfoItem.gold}}</view>
+            </view>
+          </view>
+
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+<view class="modal-dialog" hidden='{{hiddenmodalput}}' bindtap='closePreviewImageWindow' bindconfirm="confirm">
+  <image style='width:100%;height:100%;' mode='aspectFit' src="{{previewImageUrl}}" />
+</view>
+</view>

@@ -1,0 +1,12 @@
+<import src="../common/template/item.wxml"/>
+<scroll-view class='container'>
+ 
+    <view class='itemBoot'>
+      <view wx:for="{{itemList}}" wx:key="*this">
+        <template is="item" data="{{...item}}"/>
+      </view>
+    </view>
+
+</scroll-view>
+
+

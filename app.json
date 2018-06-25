@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/main/index",
+    "pages/uploadImg/index",
+    "pages/index/index",
+    "pages/rank/index",
+    "pages/facescore/facescore",
+    "pages/recognition/recognition",
+    "pages/introduce/introduce"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFB6C1",
+    "navigationBarTitleText": "MIMO",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ADD8E6",
+    "backgroundTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "backgroundColor": "#ADD8E6",
+    "selectedColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "个人中心",
+        "iconPath": "./image/png/contact.png",
+        "selectedIconPath": "./image/png/contact.png"
+      },
+      {
+        "pagePath": "pages/main/index",
+        "text": "应用中心",
+        "iconPath": "./image/png/apps.png",
+        "selectedIconPath": "./image/png/apps.png"
+      },
+      {
+        "pagePath": "pages/rank/index",
+        "text": "排行榜",
+        "iconPath": "./image/png/rank.png",
+        "selectedIconPath": "./image/png/rank.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
