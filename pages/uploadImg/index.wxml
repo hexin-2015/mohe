@@ -32,8 +32,8 @@
   
   <view class="bottomView" hidden='{{isHiddenBtn}}'>
      <view class="bottomBtnView">
-      <button bindtap='onModifyIntroduction' type='primary' size='mini' plain='true'>更新简介</button>
-      <button bindtap='onAddIntroduction' type='primary' size='mini' plain='true'>添加简介</button>
+      <button wx:if="{{haveIntroduction}}" bindtap='onModifyIntroduction' type='primary' size='mini' plain='true'>更多简介</button>
+      <button wx:if="{{!haveIntroduction}}" bindtap='onAddIntroduction' type='primary' size='mini' plain='true'>添加简介</button>
     </view> 
   </view>
 

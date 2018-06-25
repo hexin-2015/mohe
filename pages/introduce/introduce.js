@@ -13,7 +13,7 @@ Page({
     imgInfo: "null",
     inputContent: "",
     modifyInfo: {},
-    commentAddOrUpdateTitle: "添加评论"
+    commentAddOrUpdateTitle: "添加简介"
   },
 
   onLoad: function (options) {

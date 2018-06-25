@@ -12,16 +12,16 @@
     </view> 
     <view wx:else>
       <view class="no_comment">
-        <text>还没有人评论哦^_^</text>
+        <text>还没有人给它添加简介哦</text>
       </view>
     </view> 
   </scroll-view> 
   
   <view class="bottomView">
      <form class='commInputView' bindsubmit="onAddIntroduce">
-         <textarea class="comment_textarea" placeholder="请输入你的评论^_^" name="comment_text" value="{{inputContent}}" maxlength='{{textMaxLength}}' focus='{{textarea_focus}}' bindblur="onUserIntroduce"/> 
+         <textarea class="comment_textarea" placeholder="写简介" name="comment_text" value="{{inputContent}}" maxlength='{{textMaxLength}}' focus='{{textarea_focus}}' bindblur="onUserIntroduce"/> 
           <view class="btnView">
-            <button class="comment_add_btn" formType="submit" type='primary' size='mini' plain='true'>{{commentAddOrUpdateTitle}}</button>
+            <button class="comment_add_btn" formType="submit" type='primary' size='mini' plain='true'>{{commentAddOrUpdateTitle}}    </button>
           </view>   
     </form> 
   </view>

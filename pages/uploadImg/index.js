@@ -14,6 +14,7 @@ Page({
     kindInfo:{},
     imageUrls: [],
     isHiddenBtn: true,
+    haveIntroduction:false,
   },
   
   onLoad: function (options) {
@@ -23,13 +24,9 @@ Page({
       userInfo: app.globalData.userInfo,
       
       })
-
-    console.log("====================" + this.data.img + "\nid:" + options.id + "\ntitle:" + options.title)
-    console.log(app.globalData.userInfo)
     wx.setNavigationBarTitle({ title: options.title})
     var that = this;
     uploadImg(options.imgUrl, this.data.imgType).then(data => {
-      console.log(data)
       var resInfo = parseSuccessRes(that, data);
       that.setData({ imgInfo: resInfo })
     });
@@ -141,6 +138,7 @@ function parseSuccessRes(thisPage,resultData){
 
   if (json.data.kindInfo != undefined) {
     thisPage.setData({ kindInfo: json.data.kindInfo })
+    thisPage.setData({ haveIntroduction:true})
   }
 
   var images = json.data.images;

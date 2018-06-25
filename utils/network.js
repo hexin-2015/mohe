@@ -40,6 +40,7 @@ export const del = (url, data, headers) => request('DELETE', url, data, headers)
 
 export const uploadFile = (url,filePath, formData) => {
   formData.sessionID = getSessionId();
+  console.log("uploadFile============>");
   console.info(url,filePath,formData);
   return new Promise((resolve, reject) => {
     const response = {};

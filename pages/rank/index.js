@@ -191,11 +191,7 @@ Page({
     if (0 < this.data.activeIndex) {
       tempIndex = this.data.activeIndex - 1;
     } else if (0== this.data.activeIndex) {
-      wx.showToast({
-        title: '已到最右边啦！！！',
-        icon: 'none'
-      });
-      return;
+      tempIndex = this.data.rankTypes.length - 1;
     }
 
     this.setData({
