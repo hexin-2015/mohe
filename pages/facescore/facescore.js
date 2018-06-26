@@ -93,11 +93,14 @@ Page({
     var that =this;
     uploadBeautyData2Rank(that.data.faceLogId).then(data=>{
       console.log(data)
+      that.setData({
+        canUploadRank: false
+      });
         wx.showToast({
           title: "上传成功！",
           icon: 'success',
           duration: 2000
-        })
+        });
     },error=>{
       wx.showToast({
         title: "上传失败！",
