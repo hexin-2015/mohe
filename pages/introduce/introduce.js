@@ -286,6 +286,7 @@ function parseUpdateSuccessRes(thisPage, resultData) {
 
   thisPage.setData({
     inputContent: "",
+    isUpdate: false,
     commentAddOrUpdateTitle: "添加评论"
   });
 
