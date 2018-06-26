@@ -262,9 +262,7 @@ function parseUpdateSuccessRes(thisPage, resultData) {
     retInfo.msg = "修改评论失败!"
 
     console.log(retInfo.msg)
-    wx.showToast({
-      title: retInfo.msg,
-    })
+    showToastNormal(retInfo.msg);
     return retInfo;
   }
 
@@ -298,17 +296,12 @@ function parseLikeSuccessRes(thisPage, resultData) {
     }
 
     console.log(retInfo.msg)
-    wx.showToast({
-      title: retInfo.msg,
-    })
+    showToastNormal(retInfo.msg);
     return retInfo;
   }
 
   retInfo.isOK = true
-  retInfo.msg = "点赞成功!"
-  wx.showToast({
-    title: retInfo.msg,
-  })
+  retInfo.msg = "点赞成功!";
 
   showToast(resultData,retInfo.msg);
 
