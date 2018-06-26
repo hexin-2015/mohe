@@ -16,7 +16,6 @@
         <text class="showTime"> {{createtime}} </text>
       </view>
 
-
       <view class="comment_social">
         <block wx:if='{{isMe == 1}}'>
           <view class="comment_modify" bindtap='onModify' id="{{id}}" data-content="{{content}}">
@@ -25,13 +24,13 @@
         </block>
 
         <block wx:if='{{isLiked == 1}}'>
-          <view class="comment_zan" bindtap='onLike' id="{{id}}" data-isLiked="{{isLiked}}">
+          <view class="comment_zan" bindtap='onLike' id="{{id}}" data-islike="{{isLiked}}">
             <image class="comment_zan_image" src="./images/zan_self.png"></image>
             <text class="comment_zan_num" wx:if="{{score > 0}}">{{score}}</text>
           </view>
         </block>
         <block wx:else>
-          <view class="comment_zan" bindtap='onLike' id="{{id}}" data-isLiked="{{isLiked}}">
+          <view class="comment_zan" bindtap='onLike' id="{{id}}" data-islike="{{isLiked}}">
             <image class="comment_zan_image" src="./images/zan.png"></image>
             <text class="comment_zan_num" wx:if="{{score > 0}}">{{score}}</text>
             <text class="comment_zan_num" wx:else>赞</text>

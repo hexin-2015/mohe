@@ -19,7 +19,7 @@
   
   <view class="bottomView">
      <form class='commInputView' bindsubmit="onAddIntroduce">
-         <textarea class="comment_textarea" placeholder="写简介" name="comment_text" value="{{inputContent}}" maxlength='{{textMaxLength}}' focus='{{textarea_focus}}' bindblur="onUserIntroduce"/> 
+         <textarea class="comment_textarea" placeholder="写简介" name="comment_text" value="{{inputContent}}" maxlength='{{textMaxLength}}' focus='{{textarea_focus}}'/> 
           <view class="btnView">
             <button class="comment_add_btn" formType="submit" type='primary' size='mini' plain='true'>{{commentAddOrUpdateTitle}}    </button>
           </view>   

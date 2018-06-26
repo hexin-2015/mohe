@@ -13,7 +13,9 @@ Page({
     imgInfo: "null",
     inputContent: "",
     modifyInfo: {},
-    commentAddOrUpdateTitle: "添加简介"
+    commentAddOrUpdateTitle: "添加简介",
+    textarea_focus: false, //文本框是否获取焦点
+    isUpdate: false, //是否是修改评论
   },
 
   onLoad: function (options) {
@@ -92,7 +94,7 @@ Page({
       return;
     }
     
-    if (this.data.commentAddOrUpdateTitle == "添加评论") {
+    if (this.data.isUpdate == false) {
       addIntroduce(this, this.data.imgType, this.data.kindid, this.data.inputContent)
     } else {
       var id = this.data.modifyInfo.id      
@@ -109,7 +111,7 @@ Page({
   onLike: function (e) {
     var that = this;
     var id = e.currentTarget.id;
-    var isLiked = e.currentTarget.dataset.isLiked;
+    var isLiked = e.currentTarget.dataset.islike;
     console.log("--------isLiked------------" + isLiked)
     console.log("--------id------------" + id)
     if (isLiked) {
@@ -154,6 +156,8 @@ Page({
     if (content != undefined) {
       this.setData({ inputContent: content ,
           commentAddOrUpdateTitle: "修改评论",
+                   textarea_focus: true,
+                         isUpdate: true,
                        modifyInfo: commUpdate});
       
     } else {
@@ -308,7 +312,7 @@ function parseLikeSuccessRes(thisPage, resultData) {
     wx.showToast({
       title: retInfo.msg,
     })
-    return imgInfo;
+    return retInfo;
   }
 
   retInfo.isOK = true

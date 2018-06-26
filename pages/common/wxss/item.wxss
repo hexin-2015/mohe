@@ -96,7 +96,6 @@
   align-items: flex-end;
   text-align: right;
   justify-content: flex-end;
-  flex-grow: 1;
 }
 
 .comment_zan {
@@ -123,10 +122,12 @@
 }
 
 .comment_modify {
-  height: 50rpx;
   width: 85rpx;
+  display: flex;
   margin-right: 5rpx;
-  align-items: right;
+  align-items: flex-end;
+  text-align: right;
+  justify-content: flex-end;
 }
 
 .comment_modify_title {
