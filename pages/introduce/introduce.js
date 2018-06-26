@@ -1,6 +1,6 @@
 // pages/introduce/introduce.js
 import { addIntrduce, updateIntrduce, getAllIntroduce, addLike } from "../../utils/service";
-
+import { showToast, showToastNormal } from "../../utils/common";
 Page({
 
   /**
@@ -88,9 +88,7 @@ Page({
     }
 
     if (this.data.inputContent == "") {
-      wx.showToast({
-        title: '请先输入内容',
-      })
+      showToastNormal('请先输入内容');
       return;
     }
     
@@ -115,9 +113,7 @@ Page({
     console.log("--------isLiked------------" + isLiked)
     console.log("--------id------------" + id)
     if (isLiked) {
-      wx.showToast({
-        title: "你已经赞过了",
-      });
+      showToastNormal('你已经赞过了');
       return;
     }
     addLike(this.data.imgType, this.data.kindid, id).then(data => {
@@ -239,17 +235,13 @@ function parseAddSuccessRes(thisPage, resultData) {
     }
     
     console.log(retInfo.msg)
-    wx.showToast({
-      title: retInfo.msg,
-    })
+    showToastNormal(retInfo.msg);
     return retInfo;
   }
 
   retInfo.isOK = true
   retInfo.msg = "添加评论成功!"
-  wx.showToast({
-    title: retInfo.msg,
-  })
+  showToast(resultData,retInfo.msg);
 
   thisPage.setData({ inputContent : ""})
 
@@ -278,11 +270,7 @@ function parseUpdateSuccessRes(thisPage, resultData) {
 
   retInfo.isOK = true
   retInfo.msg = "修改评论成功!"
-  wx.showToast({
-    title: retInfo.msg,
-    duration: 1500,
-    icon: ""
-  })
+  showToastNormal(retInfo.msg);
 
   thisPage.setData({
     inputContent: "",
@@ -321,6 +309,8 @@ function parseLikeSuccessRes(thisPage, resultData) {
   wx.showToast({
     title: retInfo.msg,
   })
+
+  showToast(resultData,retInfo.msg);
 
   getAllComment(thisPage);
 

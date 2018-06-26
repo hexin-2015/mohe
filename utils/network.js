@@ -8,7 +8,7 @@
  * http://es6.ruanyifeng.com/#docs/promise
  */
 
-import { getSessionId } from './common';
+import { getSessionId,showToast } from './common';
 
 /**
  * 发起get请求
@@ -98,14 +98,7 @@ export function request(method, url, data={}, header = { 'content-type': 'applic
                 console.info(method, url);
                 if (response.success) {
                     console.info('请求成功', response.success);
-                    if (undefined!=response.success.ext){
-                      wx.showToast({
-                        title: '恭喜你，获得' + response.success.ext.getGold+'个金币',
-                        icon:'none',
-                        duration: 2000
-                      })
-                    }
-                    
+                    showToast(response.success);
                     resolve(response.success)
                 } else {
                     console.info('请求失败', response.fail);

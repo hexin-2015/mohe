@@ -1,5 +1,6 @@
 // pages/facescore/facescore.js
 import { uploadBeautyData2Rank, uploadImg } from "../../utils/service";
+import { showToast } from "../../utils/common";
 var imgType = "face";
 Page({
 
@@ -96,17 +97,14 @@ Page({
       that.setData({
         canUploadRank: false
       });
-        wx.showToast({
-          title: "上传成功！",
-          icon: 'success',
-          duration: 2000
-        });
+       
+      showToast(data,'上传成功！');
     },error=>{
-      wx.showToast({
-        title: "上传失败！",
-        icon:"none",
-        duration: 2000
-      })
+      // wx.showToast({
+      //   title: "上传失败！",
+      //   icon:"none",
+      //   duration: 2000
+      // })
     });
   }
 })
