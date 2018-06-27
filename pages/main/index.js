@@ -11,31 +11,31 @@ Page({
    
     itemList: [{
       id: ImgType[0],
-      title: '植物识别',
+      title: '植 物',
       bindtap:"onClickButton",
       imgUrl:"../../image/jpg/plant.jpg"
     },
       {
         id: ImgType[1],
-        title: '动物识别',
+        title: '动 物',
         bindtap: "onClickButton",
         imgUrl: "../../image/jpg/animal.jpg"
       },
       {
         id: ImgType[2],
-        title: '车型识别',
+        title: '车 辆',
         bindtap: "onClickButton",
         imgUrl: "../../image/jpg/car.jpg"
       },
       {
         id: ImgType[3],
-        title: '卡路里识别',
+        title: '食 物',
         bindtap: "onClickButton",
         imgUrl: "../../image/jpg/food.jpg"
       },
       {
         id: ImgType[4],
-        title: '颜值测试',
+        title: 'Face',
         bindtap: "onClickButton",
         imgUrl: "../../image/jpg/face.jpg"
       },

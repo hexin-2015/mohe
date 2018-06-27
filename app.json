@@ -21,10 +21,10 @@
     "selectedColor": "#FFFFFF",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "个人中心",
-        "iconPath": "./image/png/contact.png",
-        "selectedIconPath": "./image/png/contact.png"
+        "pagePath": "pages/rank/index",
+        "text": "排行榜",
+        "iconPath": "./image/png/rank.png",
+        "selectedIconPath": "./image/png/rank.png"
       },
       {
         "pagePath": "pages/main/index",
@@ -33,10 +33,10 @@
         "selectedIconPath": "./image/png/apps.png"
       },
       {
-        "pagePath": "pages/rank/index",
-        "text": "排行榜",
-        "iconPath": "./image/png/rank.png",
-        "selectedIconPath": "./image/png/rank.png"
+        "pagePath": "pages/index/index",
+        "text": "个人中心",
+        "iconPath": "./image/png/contact.png",
+        "selectedIconPath": "./image/png/contact.png"
       }
     ]
   },
