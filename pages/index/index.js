@@ -124,5 +124,8 @@ Page({
    */
   onAboutMe: function () {
     console.log("------------onAboutMe------------")
+    wx.navigateTo({
+      url: '../aboutme/aboutme',
+    })
   },
 })
