@@ -1,0 +1,32 @@
+<!--pages/feedback/feedback.wxml-->
+<scroll-view class="container" scroll-y="{{true}}">
+  <view class="topView">
+    <text>如果在使用中有什么问题或意见建议请联系我们</text>
+  </view>
+
+  <form class='commInputView' bindsubmit="onSubmitFeedback">
+     <view class="middleView">
+      <view class="fdTypeView">
+        <text>反馈类型：</text>
+        <view class='fdClickView'>
+          <picker bindchange="clickFeedType" value="{{index}}" range="{{feedTypeList}}">
+            <text class='fdTypeSel'>{{feedTypeList[index]}}</text>
+            <image class='sel_arrow' src='./image/sel_arrow.png'></image>
+          </picker>
+        </view>
+      </view>
+      <text>反馈内容：</text>
+      <textarea class="fd_textarea" name="comment_text" value="{{inputContent}}" maxlength='{{textMaxLength}}' focus='{{textarea_focus}}'/> 
+      <view class='fdContactView'>
+        <text>联系方式：</text>
+        <input class='fdContactInput' placeholder='请输入你的联系方式' type='number' maxlength='20'>{{contactInfo}}</input>
+      </view>
+    </view>
+
+    <view class="bottomView">
+      <button class="fdSubmitBtn" formType="submit">提交</button>
+    </view>
+  </form> 
+
+  
+</scroll-view>

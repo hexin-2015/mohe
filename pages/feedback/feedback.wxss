@@ -1,0 +1,89 @@
+/* pages/feedback/feedback.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.topView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 30rpx;
+  height: 80rpx;
+  border-bottom: 1rpx solid #dddddd;
+  color: #14141B;
+}
+
+.middleView {
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  color: #555;
+}
+
+.fdTypeView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.fdClickView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fdTypeSel {
+  color: #0e0e0e;
+}
+
+.sel_arrow {
+  width: 22rpx;
+  height: 12rpx;
+  margin-left: 5rpx;
+}
+
+.fd_textarea {
+  width:100%;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  background-color: #EFEFF4;
+  color: #0e0e0e;
+}
+
+.fdContactView {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  margin-top: 20rpx;
+  align-items: center;
+}
+
+.fdContactInput {
+  border-bottom: 1rpx dotted gainsboro;
+  color: #0e0e0e;
+  margin-right: 0rpx;
+}
+
+.bottomView {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 50rpx;
+}
+
+.fdSubmitBtn {
+  width: 98%;
+  height: 80rpx;
+  background-color: #E72B2E; 
+  color: white;
+  font-size: 35rpx;
+}
+
