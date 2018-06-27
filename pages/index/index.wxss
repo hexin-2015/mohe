@@ -93,3 +93,48 @@
   color: #fff;
   font-size: 30rpx;
 }
+
+/*-----------list begin----------*/
+
+.mylistWrap {
+  padding-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+
+.myList {
+  height: 100rpx;
+  padding-left: 26rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.myListImages {
+  width: 38rpx;
+  height: 38rpx;
+  vertical-align: middle;
+}
+
+.myListArrows {
+  width: 12rpx;
+  height: 22rpx;
+  padding-right: 26rpx;
+  vertical-align: middle;
+}
+
+.mylistText {
+  color: white;
+  font-size: 35rpx;
+  padding-left: 20rpx;
+  vertical-align: middle;
+}
+
+.myList-single {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100rpx;
+  position: relative;
+}
+
+/*-----------list end----------*/

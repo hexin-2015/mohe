@@ -6,7 +6,8 @@
     "pages/rank/index",
     "pages/facescore/facescore",
     "pages/recognition/recognition",
-    "pages/introduce/introduce"
+    "pages/introduce/introduce",
+    "pages/feedback/feedback"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FFB6C1",
@@ -21,10 +22,10 @@
     "selectedColor": "#FFFFFF",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "个人中心",
-        "iconPath": "./image/png/contact.png",
-        "selectedIconPath": "./image/png/contact.png"
+        "pagePath": "pages/rank/index",
+        "text": "排行榜",
+        "iconPath": "./image/png/rank.png",
+        "selectedIconPath": "./image/png/rank.png"
       },
       {
         "pagePath": "pages/main/index",
@@ -33,10 +34,10 @@
         "selectedIconPath": "./image/png/apps.png"
       },
       {
-        "pagePath": "pages/rank/index",
-        "text": "排行榜",
-        "iconPath": "./image/png/rank.png",
-        "selectedIconPath": "./image/png/rank.png"
+        "pagePath": "pages/index/index",
+        "text": "个人中心",
+        "iconPath": "./image/png/contact.png",
+        "selectedIconPath": "./image/png/contact.png"
       }
     ]
   },
