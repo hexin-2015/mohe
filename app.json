@@ -7,7 +7,8 @@
     "pages/facescore/facescore",
     "pages/recognition/recognition",
     "pages/introduce/introduce",
-    "pages/feedback/feedback"
+    "pages/feedback/feedback",
+    "pages/aboutme/aboutme"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FFB6C1",

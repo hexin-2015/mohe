@@ -16,7 +16,7 @@
       </view>
     </block>
   </view>
-  
+
   <view class='mylistWrap'>
     <view class='myList' catchtap='onFeedBack'>
       <view class='myList-single'>

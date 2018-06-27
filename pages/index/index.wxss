@@ -44,6 +44,7 @@
   align-items: center;
   justify-content: center;
   padding: 30rpx 0;
+  border-bottom: 1px silver #e0e0e0;
 }
 
 .col {
@@ -95,10 +96,9 @@
 }
 
 /*-----------list begin----------*/
-
 .mylistWrap {
+  margin-top: 50rpx;
   padding-bottom: 20rpx;
-  margin-top: 20rpx;
 }
 
 .myList {
@@ -137,4 +137,4 @@
   position: relative;
 }
 
-/*-----------list end----------*/
+/*---------------list end-----------------*/

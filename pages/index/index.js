@@ -52,7 +52,6 @@ Page({
     }
 
     getMimoUserInfo().then(res => {
-// beauty: 0, gender: 1, gold: 21, nickName: "茂茂"
       that.setData({
         beauty: res.data.beauty,
         gold: res.data.gold
@@ -93,6 +92,10 @@ Page({
   /**
    * 购买金币
    */
+  onShow: function(){
+    
+  },
+
   chargeMoney: function () {
     if (getApp().globalData.isIphone) {
       wx.showToast({
@@ -107,10 +110,10 @@ Page({
   },
 
   /**
-   * 点击“反馈我们”
+   * 点击反馈
    */
-  onFeedBack: function () {
-    console.log("------------onFeedBack------------")
+  onFeedBack: function() {
+    console.log("-------onFeedback---------");
     wx.navigateTo({
       url: '../feedback/feedback',
     })
