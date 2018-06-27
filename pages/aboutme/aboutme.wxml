@@ -1,0 +1,15 @@
+<!--pages/feedback/feedback.wxml-->
+<scroll-view class="container" scroll-y="{{true}}">
+  <view class="topView">
+    <image class="iconView" src="../../image/icon/mimo.png"></image>
+    <text class='versionTextView'>version 1.7.0</text>
+    <text class='introduceTextView'>我们的理念：
+    我们想做一个简单实用而且充满趣味性的百科app
+
+    我们的目标：
+    我们希望你能在应用里收获知识和快乐，也感谢你的分享让百科内容更加丰富多彩
+    
+    如果你对我们的应用有好的建议，或者要吐槽我们糟糕的设计理念，都欢迎你反馈给我们，我们会认真考虑你的建议，并加以改进。
+    </text>
+  </view>
+</scroll-view>

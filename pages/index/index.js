@@ -13,10 +13,15 @@ Page({
     beauty:0,
     gold:0,
   },
+
   //事件处理函数
   bindViewTap: function() {
     
   },
+
+  /**
+   * onLoad
+   */
   onLoad: function () {
     var that = this;
     if (app.globalData.userInfo) {
@@ -47,16 +52,11 @@ Page({
     }
 
     getMimoUserInfo().then(res => {
-// beauty: 0, gender: 1, gold: 21, nickName: "茂茂"
       that.setData({
         beauty: res.data.beauty,
         gold: res.data.gold
       })
     });
-   
-
-    
-    
   },
 
   /**
@@ -65,6 +65,10 @@ Page({
   onReady: function () {
    
   },
+
+  /**
+   * 获取用户信息
+   */
   getUserInfo: function(e) {
     if (e.detail.userInfo == undefined){
       return;
@@ -77,9 +81,21 @@ Page({
     //更新用户数据
     uploadUserInfo(e.detail.userInfo.gender,e.detail.userInfo.nickName,e.detail.userInfo.avatarUrl);
   },
+
+  /**
+   * onShow
+   */
   onShow: function(){
     
   },
+  
+  /**
+   * 购买金币
+   */
+  onShow: function(){
+    
+  },
+
   chargeMoney: function () {
     if (getApp().globalData.isIphone) {
       wx.showToast({
@@ -91,5 +107,25 @@ Page({
       //   url: '../sub_pages/pay/pay',
       // })
     }
+  },
+
+  /**
+   * 点击反馈
+   */
+  onFeedBack: function() {
+    console.log("-------onFeedback---------");
+    wx.navigateTo({
+      url: '../feedback/feedback',
+    })
+  },
+
+  /**
+   * 点击“关于”
+   */
+  onAboutMe: function () {
+    console.log("------------onAboutMe------------")
+    wx.navigateTo({
+      url: '../aboutme/aboutme',
+    })
   },
 })

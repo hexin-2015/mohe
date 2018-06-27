@@ -6,7 +6,9 @@
     "pages/rank/index",
     "pages/facescore/facescore",
     "pages/recognition/recognition",
-    "pages/introduce/introduce"
+    "pages/introduce/introduce",
+    "pages/feedback/feedback",
+    "pages/aboutme/aboutme"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FFB6C1",
