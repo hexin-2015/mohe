@@ -9,10 +9,25 @@
 
 .topView {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   font-size: 30rpx;
   color: #fff;
 }
 
+.iconView{
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+}
 
+.versionTextView{
+  margin-top: 20rpx;
+}
+
+.introduceTextView{
+  margin-top: 30rpx;
+  padding: 20rpx;
+  line-height: 55rpx;
+  font-size: 35rpx;
+}

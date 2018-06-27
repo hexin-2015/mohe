@@ -80,6 +80,7 @@ export const uploadUserInfo = (gender, nickName, avatarUrl) => post(`${API_ROOT}
  * 根据微信登录返回的Code，获取用户信息相关的openId, sessionKey, unionId
  */
 export const getWXUserInfoByCode = (code) => post(`${API_ROOT}/login/weixin`, {"code":`${code}`});
+
 /**
  * user/info
  * 获取mimo用户信息：
@@ -88,3 +89,10 @@ export const getWXUserInfoByCode = (code) => post(`${API_ROOT}/login/weixin`, {"
  * }
  */
 export const getMimoUserInfo = () => post(`${API_ROOT}/user/info`);
+
+
+/**
+ * 用户反馈意见 user/advice
+ */
+export const feedbackInfo = (advType, content, contact) => post(`${API_ROOT}/user/advice`, { "type": `${advType}`, "content": `${content}`, "contact": `${contact}` });
+

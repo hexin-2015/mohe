@@ -1,6 +1,6 @@
 // pages/feedback/feedback.js
-import { uploadBeautyData2Rank, uploadImg } from "../../utils/service";
-import { showToast } from "../../utils/common";
+import { feedbackInfo } from "../../utils/service";
+import { showToast, showToastNormal } from "../../utils/common";
 
 Page({
 
@@ -8,10 +8,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    feedTypeSel: "功能意见",
     index: 0,
     feedTypeList: ["功能意见", "界面意见", "您的需求", "操作意见", "流量问题", "其他"],
-    contactInfo: "1234567890",
+    fd_contact: "",
+    fd_content: "",
     textarea_focus: false,
   },
 
@@ -64,15 +64,46 @@ Page({
   
   },
 
+  /**
+   * 点击反馈类型选择器
+   */
   clickFeedType: function (e) {
     console.log("--------clickFeedType-------")
     this.setData({
-      index: e.detail.value
+      index: e.detail.value,
     })
   },
 
-  onSubmitFeedback: function () {
+  /**
+   * 提交反馈内容
+   */
+  onSubmitFeedback: function (e) {
     console.log("--------onSubmitFeedback-------")
+    console.log(e.detail.value)
+    var fdType = this.data.feedTypeList[this.data.index];
+    var fdContent = e.detail.value.fd_content;
+    var fdContact = e.detail.value.fd_contact;
+
+    if (fdContent == undefined || fdContent == ""){
+      showToastNormal("请先输入内容");
+      return;
+    }
+
+    feedbackInfo(fdType, fdContent, fdContact).then(data => {
+      console.log(data)
+      var json = JSON.parse(JSON.stringify(data))
+      var code = json.code;
+      console.log(code)
+      if (code == "200") {
+        showToastNormal("提交反馈信息成功，感谢你的意见！");
+        this.setData({
+          fd_content : "",
+          fd_contact : ""
+        });
+      } else {
+        showToastNormal("提交反馈信息失败！");
+      }
+    });
   }
 })
 

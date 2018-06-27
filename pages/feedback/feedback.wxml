@@ -10,16 +10,16 @@
         <text>反馈类型：</text>
         <view class='fdClickView'>
           <picker bindchange="clickFeedType" value="{{index}}" range="{{feedTypeList}}">
-            <text class='fdTypeSel'>{{feedTypeList[index]}}</text>
+            <text class='fdTypeSel' name="fd_type">{{feedTypeList[index]}}</text>
             <image class='sel_arrow' src='./image/sel_arrow.png'></image>
           </picker>
         </view>
       </view>
       <text>反馈内容：</text>
-      <textarea class="fd_textarea" name="comment_text" value="{{inputContent}}" maxlength='{{textMaxLength}}' focus='{{textarea_focus}}'/> 
+      <textarea class="fd_textarea" name="fd_content" value="{{fd_content}}" maxlength='{{textMaxLength}}' focus='{{textarea_focus}}'/> 
       <view class='fdContactView'>
         <text>联系方式：</text>
-        <input class='fdContactInput' placeholder='请输入你的联系方式' type='number' maxlength='20'>{{contactInfo}}</input>
+        <input class='fdContactInput' name="fd_contact" placeholder='请输入你的联系方式' type='number' maxlength='20' value='{{fd_contact}}'></input>
       </view>
     </view>
 
