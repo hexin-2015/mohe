@@ -49,11 +49,12 @@
 }
 
 .fd_textarea {
-  width:100%;
   margin-top: 10rpx;
   margin-bottom: 10rpx;
-  background-color: #EFEFF4;
+  border: 2rpx solid #dddddd;
+  border-radius:3%;
   color: #0e0e0e;
+  width: 98%
 }
 
 .fdContactView {
@@ -71,18 +72,21 @@
 }
 
 .bottomView {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  text-align: center;
-  width: 100%;
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap; 
   margin-top: 50rpx;
+  width: 100%;
+
 }
 
 .fdSubmitBtn {
-  width: 98%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  width: 45%;
   height: 80rpx;
-  background-color: #E72B2E; 
+  background-color: #43CD80;
   color: white;
   font-size: 35rpx;
 }

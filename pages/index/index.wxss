@@ -97,8 +97,10 @@
 
 /*-----------list begin----------*/
 .mylistWrap {
-  margin-top: 50rpx;
-  padding-bottom: 20rpx;
+  height: 600rpx;
+  display: flex;
+  flex-direction: column ;
+  justify-content:flex-end ;
 }
 
 .myList {
@@ -109,21 +111,21 @@
 }
 
 .myListImages {
-  width: 38rpx;
-  height: 38rpx;
+  width: 30rpx;
+  height: 30rpx;
   vertical-align: middle;
 }
 
 .myListArrows {
   width: 12rpx;
-  height: 22rpx;
+  height: 20rpx;
   padding-right: 26rpx;
   vertical-align: middle;
 }
 
 .mylistText {
   color: white;
-  font-size: 35rpx;
+  font-size: 30rpx;
   padding-left: 20rpx;
   vertical-align: middle;
 }

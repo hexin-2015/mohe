@@ -79,13 +79,13 @@
 
 .showNickName{
   display: flex;
-  font-size: 45rpx;
+  font-size: 38rpx;
 
 }
 
 .showTime{
   display: flex;
-  font-size: 30rpx;
+  font-size: 26rpx;
   
 }
 
@@ -96,33 +96,34 @@
   align-items: flex-end;
   text-align: right;
   justify-content: flex-end;
+  width: 33%;
 }
 
 .comment_zan {
   display: flex;
-  margin-right: 5rpx;
+  margin-left: 20rpx;
   align-items: flex-end;
   text-align: right;
   justify-content: flex-end;
 }
 
 .comment_zan_image {
-  height: 30rpx;
-  width: 30rpx;
-  margin-right: 5rpx;
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 6rpx;
   margin-left: 10rpx;
+  padding-bottom: 5rpx;
 }
 
 .comment_zan_num {
   color: #FFFFFF;
-  font-size: 30rpx;
+  font-size: 26rpx;
   width: auto;
-  margin-bottom: -5rpx;
   text-align: bottom;
 }
 
 .comment_modify {
-  width: 85rpx;
+  width: 120rpx;
   display: flex;
   margin-right: 5rpx;
   align-items: flex-end;
@@ -132,6 +133,5 @@
 
 .comment_modify_title {
   color: #FFFFFF;
-  font-size: 30rpx;
-  margin-bottom: -5rpx;
+  font-size: 26rpx;
 }
