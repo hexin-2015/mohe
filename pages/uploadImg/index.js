@@ -15,6 +15,7 @@ Page({
     imageUrls: [],
     isHiddenBtn: true,
     haveIntroduction:false,
+    swiperCurrent: 0
   },
   
   onLoad: function (options) {
@@ -109,6 +110,24 @@ Page({
   onComment: function (e) {
     comment()
 
+  }, 
+
+  /**
+   * 图片轮播切换
+   */
+  swiperChange: function (e) {
+    this.setData({
+      swiperCurrent: e.detail.current
+    })
+  },
+
+  /**
+   * 点击dots
+   */
+  tapDots: function (e) {
+    this.setData({
+      swiperCurrent: e.currentTarget.dataset.index
+    })
   },
 })
 
