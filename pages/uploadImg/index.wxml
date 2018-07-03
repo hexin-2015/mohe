@@ -2,15 +2,23 @@
 <view class='container'>
 
    <scroll-view class='topScrollView' scroll-y="true">
-    <swiper circular='true' previous-margin="0px" display-multiple-items='1'  next-margin='0rpx'>
-      <block wx:for="{{imageUrls}}" wx:for-item="imgItem" wx:key="*this">
-        <swiper-item>
-          <view class='rankTypeItem'>
-            <image src="{{imgItem}}"  mode="aspectFill" class="img" ></image>
-          </view>
-        </swiper-item>
-      </block>
-    </swiper> 
+    <view class="swiper-container">
+      <swiper class="swiper" circular='true' current="{{swiperCurrent}}" bindchange="swiperChange" autoplay="auto" interval="5000" duration="500">
+        <block wx:for="{{imageUrls}}" wx:for-item="imgItem" wx:for-index="index" wx:key="*this">
+          <swiper-item>
+            <view class='rankTypeItem'>
+              <image src="{{imgItem}}"  mode="aspectFill" class="img" ></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper> 
+
+      <view class="dots">
+        <block wx:for="{{imageUrls}}" wx:key="unique">
+          <view class="dot{{index == swiperCurrent ? ' active' : ''}}" bindtap='tapDots' data-index='{{index}}'></view>
+        </block>
+      </view>
+    </view>
 
     <view wx:if="{{imgInfo != 'null'}}" class="showResultMessage">
       <view wx:if="{{imgInfo.isOK==false}}">{{imgInfo.msg}}</view>

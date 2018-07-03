@@ -113,3 +113,28 @@ view{
   justify-content: center;
 }
 
+
+swiper-container{
+  position: relative;
+}
+.swiper-container .dots{
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+.swiper-container .dots .dot{
+  margin: 0 10rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  transition: all .6s;
+}
+.swiper-container .dots .dot.active{
+  /* width: 24rpx; */
+  background: #f80;
+}
+
